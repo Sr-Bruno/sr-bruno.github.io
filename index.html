@@ -6,18 +6,16 @@
     <title>Insert</title>
 </head>
 <body>
-    
-    file = fopen(getScriptPath("info.log"), 0);
-
-<!--
+    <a href="https://sr-bruno.github.io/?type=1&q=mensagem">link</a>
+    <script>
+        file = fopen(getScriptPath("info.log"), 0);
         file_length = flength(file);
         var content = fread(file,file_length);
         var div = document.getElementById("listar");
         //alert(div);
         div.innerHTML = "";
         div.innerHTML = content;
-    -->
-    <script>
+        
         var query = location.search.slice(1);
         var partes = query.split('&');
         var data = {};
@@ -27,7 +25,8 @@
             var valor = chaveValor[1];
             data[chave] = valor;
         });
-        alert(data.reg);
+        alert(data.q);
+        alert(data.type);
     </script>
     <div id="listar"></div>
 </body>
