@@ -6,17 +6,18 @@
     <title>Insert</title>
 </head>
 <body>
-    <script>
-        file = fopen(getScriptPath("info.log"), 0);
+    
+    file = fopen(getScriptPath("info.log"), 0);
 
-
+<!--
         file_length = flength(file);
         var content = fread(file,file_length);
         var div = document.getElementById("listar");
         //alert(div);
         div.innerHTML = "";
         div.innerHTML = content;
-        
+    -->
+    <script>
         var query = location.search.slice(1);
         var partes = query.split('&');
         var data = {};
